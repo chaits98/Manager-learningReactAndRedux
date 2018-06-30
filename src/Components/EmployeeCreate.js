@@ -21,7 +21,10 @@ class EmployeeCreate extends Component {
                         label='Phone'
                         placeholder='XXX-XXX-XXXX'
                         value={this.props.phone}
-                        onChangeText={(value) => this.props.employeeUpdate({ prop: 'phone', value })}
+                        onChangeText={
+                            (value) => 
+                            this.props.employeeUpdate({ prop: 'phone', value })
+                        }
                     />
                 </CardSection>
                 <CardSection style={{ flexDirection: 'column' }} >

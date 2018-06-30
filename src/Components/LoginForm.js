@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text, Image, Dimensions } from 'react-native';
+import { View, Text } from 'react-native';
 import { connect } from 'react-redux';
 import { Card, CardSection, Button, Input, Spinner } from './Common';
 import { emailChanged, passwordChanged, loginUser } from '../Actions';
 
-const logo = require('../final-logo.png');
+// const logo = require('../final-logo.png');
 
 class LoginForm extends Component {
     onEmailChange(text) {
@@ -70,7 +70,7 @@ class LoginForm extends Component {
                 <CardSection>
                     {this.renderButton()}
                 </CardSection>
-                <CardSection>
+                {/* <CardSection>
                     <Image 
                         source={logo} 
                         style={{ 
@@ -79,7 +79,7 @@ class LoginForm extends Component {
                             height: Dimensions.get('window').height * 0.5,
                         }}
                     />
-                </CardSection>
+                </CardSection> */}
             </Card>
         );
     }
