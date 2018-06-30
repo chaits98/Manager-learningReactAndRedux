@@ -1,9 +1,9 @@
 import React from 'react';
 import { View } from 'react-native';
 
-const CardSection = ({ children }) => {
+const CardSection = ({ children, style }) => {
     return (
-        <View style={styles.containerStyle}>
+        <View style={[styles.containerStyle, style]}>
             {children}
         </View>
     );
@@ -17,7 +17,7 @@ const styles = {
         justifyContent: 'flex-start',
         flexDirection: 'row',
         borderColor: '#ddd',
-        position: 'relative'
+        position: 'relative',
     }
 };
 

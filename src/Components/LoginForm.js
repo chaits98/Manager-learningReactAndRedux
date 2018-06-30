@@ -1,8 +1,10 @@
 import React, { Component } from 'react';
-import { View, Text } from 'react-native';
+import { View, Text, Image, Dimensions } from 'react-native';
 import { connect } from 'react-redux';
 import { Card, CardSection, Button, Input, Spinner } from './Common';
 import { emailChanged, passwordChanged, loginUser } from '../Actions';
+
+const logo = require('../final-logo.png');
 
 class LoginForm extends Component {
     onEmailChange(text) {
@@ -67,6 +69,16 @@ class LoginForm extends Component {
                 {this.renderError()}
                 <CardSection>
                     {this.renderButton()}
+                </CardSection>
+                <CardSection>
+                    <Image 
+                        source={logo} 
+                        style={{ 
+                            padding: 20, 
+                            width: Dimensions.get('window').width * 0.8,
+                            height: Dimensions.get('window').height * 0.5,
+                        }}
+                    />
                 </CardSection>
             </Card>
         );
